@@ -1,6 +1,6 @@
 import React from 'react'
-import { Navbar, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, NavbarBrand, DropdownItem, DropdownMenu } from 'reactstrap';
-
+import { Navbar, Nav, NavItem, UncontrolledDropdown, DropdownToggle, NavbarBrand, DropdownItem, DropdownMenu, NavbarText } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const MyNavbar = () => {
     return (
@@ -9,7 +9,7 @@ const MyNavbar = () => {
                 <NavbarBrand>Emerce</NavbarBrand>
                 <Nav>
                     <NavItem>
-                        <NavLink>Components</NavLink>
+                        <NavbarText>Hello, username</NavbarText>
                     </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
@@ -17,13 +17,13 @@ const MyNavbar = () => {
                         </DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem>
-                                Pages 1
+                                <Link to={"/cart"}>Cart</Link>
                             </DropdownItem>
                             <DropdownItem>
-                                Pages 2
+                            <Link to={"/history"}>History</Link>
                             </DropdownItem>
                             <DropdownItem>
-                                Pages 3
+                            <Link to={"/admin"}>Admin</Link>
                             </DropdownItem>
                         </DropdownMenu>
                     </UncontrolledDropdown>
