@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "fullname": "Mufti Fachrudin",
+      "username": "muftifachrudin",
+      "email": "muftiarifachrudin@yahoo.com",
+      "password": "asdfg",
+      "id": 1
+    },
+    {
+      "fullname": "jokoy",
+      "username": "dodo",
+      "email": "jd@gmail.com",
+      "password": "asdfg",
+      "id": 2
+    },
+    {
+      "fullname": "jon",
+      "username": "cen",
+      "email": "joncena@gmail.com",
+      "password": "asdfg",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "fullname": "alif",
+      "username": "alifbata",
+      "email": "alif@gmail.com",
+      "password": "asdfg",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "transactions": [],
+  "product": [],
+  "cart": []
+}
