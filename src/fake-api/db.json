@@ -28,19 +28,123 @@
   "products": [
     {
       "id": 1,
-      "productName": "Jaket Army",
+      "productName": "Baju Polos Army",
       "price": 150000,
       "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/147556bb-e8d3-4431-924f-b45f70092741.jpg",
-      "description": "Ini jaket keluaran terbaru kami",
-      "category": "Jaket"
+      "description": "Ini Baju keluaran terbaru kami",
+      "category": "Baju"
     },
     {
       "id": 2,
-      "productName": "Jaket Polos",
+      "productName": "Baju Polos Putih",
       "price": 120000,
       "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/10ae8c76-3f7c-44da-b50c-284ad04e9165.jpg",
-      "description": "Ini jaket Polos Terkeren",
+      "description": "Ini Baju Polos Japan",
+      "category": "Baju"
+    },
+    {
+      "id": 3,
+      "productName": "Baju Polos Merah",
+      "price": 110000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/e9e21549-e1c5-4068-9d93-983077edeef6.jpg",
+      "description": "Ini Baju Polos Japan",
+      "category": "Baju"
+    },
+    {
+      "id": 4,
+      "productName": "Baju Polos Biru",
+      "price": 120000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/e8a8d915-4137-4d54-a9cb-57114d2faa5b.jpg",
+      "description": "Ini Baju Polos Terkeren",
+      "category": "Baju"
+    },
+    {
+      "id": 5,
+      "productName": "Baju Polos Hitam",
+      "price": 120000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/a6c02316-3ac5-4ba2-807d-4040910911d9.jpg",
+      "description": "Ini Baju Polos Terkeren",
+      "category": "Baju"
+    },
+    {
+      "id": 6,
+      "productName": "Baju Polos",
+      "price": 120000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/10ae8c76-3f7c-44da-b50c-284ad04e9165.jpg",
+      "description": "Ini Baju Polos Terkeren",
+      "category": "Baju"
+    },
+    {
+      "id": 7,
+      "productName": "Jaket Baseball",
+      "price": 220000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/product-1/2019/5/27/2999308/2999308_9970e8bb-cd6a-4813-a496-fc4765074323_1919_1919",
+      "description": "Ini jaket baseball Terkeren",
       "category": "Jaket"
+    },
+    {
+      "id": 8,
+      "productName": "Jaket Baseball",
+      "price": 220000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/product-1/2018/11/22/2999308/2999308_88960ffa-a82d-451b-b0b0-1dd911629219_1920_1920.jpg",
+      "description": "Ini jaket Terkeren",
+      "category": "Jaket"
+    },
+    {
+      "id": 9,
+      "productName": "Topi Japan Style Hitam",
+      "price": 60000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/2/25/2521f3cd-6d2b-489f-b98e-7f7e8162bdab.jpg",
+      "description": "Ini Topi Terkeren",
+      "category": "Topi"
+    },
+    {
+      "id": 10,
+      "productName": "Topi Japan Style HijauLumut",
+      "price": 60000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/2/25/2215d31c-4b4d-45eb-9243-b0e40c022a51.jpg",
+      "description": "Ini Topi Terkeren",
+      "category": "Topi"
+    },
+    {
+      "id": 11,
+      "productName": "Topi Japan Style Abu",
+      "price": 60000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/2/25/4f35c289-656f-4792-a8e1-2fc848329f90.jpg",
+      "description": "Ini Topi Terkeren",
+      "category": "Topi"
+    },
+    {
+      "id": 12,
+      "productName": "Topi Japan Style Pink",
+      "price": 60000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/2/25/aacefe56-75b7-4fab-8ab9-4bb52d668fb1.jpg",
+      "description": "Ini Topi Terkeren",
+      "category": "Topi"
+    },
+    {
+      "id": 13,
+      "productName": "Celana Pendek Distro Grey",
+      "price": 100000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/16/08c6ff81-0d47-4457-8dee-4c91b6ba2c76.jpg",
+      "description": "Ini Celana Ternyaman",
+      "category": "Celana"
+    },
+    {
+      "id": 14,
+      "productName": "Celana Pendek Distro Hitam",
+      "price": 100000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/16/6b62d9d7-1668-40f6-8033-69c9abc1e621.jpg",
+      "description": "Ini Celana Ternyaman",
+      "category": "Celana"
+    },
+    {
+      "id": 15,
+      "productName": "Celana Pendek Distro Cream",
+      "price": 100000,
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/16/fd976ad7-3e55-4ed2-ae8c-2eff2e8ab2fa.jpg",
+      "description": "Ini Celana Ternyaman",
+      "category": "Celana"
     }
   ],
   "cart": []
