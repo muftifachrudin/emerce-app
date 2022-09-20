@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "fullname": "jokoy",
+      "username": "dodo",
+      "email": "jd@gmail.com",
+      "password": "asdfg",
+      "id": 1
+    },
+    {
+      "fullname": "jon",
+      "username": "cen",
+      "email": "joncena@gmail.com",
+      "password": "asdfg",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "fullname": "alif",
+      "username": "alifbata",
+      "email": "alif@gmail.com",
+      "password": "asdfg",
+      "role": "user",
+      "id": 3
+    }
+  ],
+  "transactions": [],
+  "product": [],
+  "cart": []
+}
