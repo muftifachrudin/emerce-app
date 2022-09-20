@@ -1,16 +1,13 @@
-import { combineReducers } from 'redux';
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
-import userReducer from './reducers/user';
-import ReduxThunk from 'redux-thunk'
-
+import { combineReducers } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import userReducer from "./reducers/user";
 
 const rootReducer = combineReducers({
-    user: userReducer,
-    middleware: applyMiddleware(ReduxThunk),
-})
+  user: userReducer,
+});
 
 const store = configureStore({
-    reducer: rootReducer,
-})
+  reducer: rootReducer,
+});
 
 export default store;
