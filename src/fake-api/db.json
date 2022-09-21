@@ -153,6 +153,14 @@
       "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/16/fd976ad7-3e55-4ed2-ae8c-2eff2e8ab2fa.jpg",
       "description": "Ini Celana Ternyaman",
       "category": "Celana"
+    },
+    {
+      "productName": "Celana Jeans Levis",
+      "price": "335000",
+      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/9/13/a0a633a7-ce36-47ed-a78e-271080f3c136.jpg",
+      "description": "Original 501",
+      "category": "Celana",
+      "id": 16
     }
   ],
   "cart": []
