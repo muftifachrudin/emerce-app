@@ -53,13 +53,21 @@ class Admin extends React.Component {
   addNewProduct = () => {
     Axios.post(`${API_URL}/products`, {
       productName: this.state.addProductName,
-      price: this.state.addProductPrice,
+      price: parseInt(this.state.addProductPrice),
       productImage: this.state.addProductImage,
       description: this.state.addDescription,
       category: this.state.addCategory,
     })
       .then(() => {
         this.fetchProducts();
+        this.setState({
+          productList: [],
+          addProductName: "",
+          addProductPrice: 0,
+          addProductImage: "",
+          addDescription: "",
+          addCategory: "",
+        });
       })
       .catch(() => {
         alert("Terjadi Kesalahan add Product!");
@@ -100,6 +108,7 @@ class Admin extends React.Component {
                   <td></td>
                   <td>
                     <input
+                      value={this.state.addProductName}
                       onChange={this.inputHandler}
                       name="addProductName"
                       type="text"
@@ -108,14 +117,16 @@ class Admin extends React.Component {
                   </td>
                   <td>
                     <input
+                      value={this.state.addProductPrice}
                       onChange={this.inputHandler}
                       name="addProductPrice"
-                      type="text"
+                      type="number"
                       className="form-control"
                     />
                   </td>
                   <td>
                     <input
+                      value={this.state.addProductImage}
                       onChange={this.inputHandler}
                       name="addProductImage"
                       type="text"
@@ -124,6 +135,7 @@ class Admin extends React.Component {
                   </td>
                   <td>
                     <input
+                      value={this.state.addDescription}
                       onChange={this.inputHandler}
                       name="addDescription"
                       type="text"
