@@ -22,6 +22,14 @@
       "password": "asdfg",
       "role": "user",
       "id": 3
+    },
+    {
+      "fullname": "Fitria",
+      "username": "fa",
+      "email": "fa@mail.com",
+      "password": "asdfg",
+      "role": "user",
+      "id": 4
     }
   ],
   "transactions": [],
