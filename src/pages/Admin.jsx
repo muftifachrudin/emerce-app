@@ -6,13 +6,22 @@ import "../assets/styles/admin.css";
 class Admin extends React.Component {
   state = {
     productList: [],
+
     addProductName: "",
-    addProductPrice: "",
+    addPrice: 0,
     addProductImage: "",
     addDescription: "",
     addCategory: "",
-  };
 
+    editId: 0,
+
+    editProductName: "",
+    editPrice: 0,
+    editProductImage: "",
+    editDescription: "",
+    editCategory: "",
+  };
+  
   fetchProducts = () => {
     Axios.get(`${API_URL}/products`)
       .then((result) => {
@@ -21,10 +30,68 @@ class Admin extends React.Component {
       .catch(() => {
         alert("Terjadi kesalahan diserver");
       });
-  };
+    };
+    
+  editToggle = (editData) => {
+    this.setState({
+      editId: editData.id,
+      editProductName: editData.productName,
+      editPrice: editData.price,
+      editProductImage: editData.productImage,
+      editDescription: editData.description,
+      editCategory: editData.category
+    })
+  }
+
+  cancelEdit = () => {
+    this.setState({editId: 0})
+  }
+
+  saveBtnHandler = () => {
+    Axios.patch(`${API_URL}/products/${this.state.editId}`,{
+      productName: this.state.editProductName,
+      price: parseInt(this.state.editPrice),
+      productImage: this.state.editProductImage,
+      description: this.state.editDescription,
+      category: this.state.editCategory,
+    })
+    .then(() =>{
+      this.fetchProducts()
+      this.cancelEdit();
+    }) 
+  }
 
   renderProducts = () => {
     return this.state.productList.map((val) => {
+      if(val.id === this.state.editId){
+        return (
+          <tr>
+            <td>{val.id}</td>
+            <td><input value={this.state.editProductName} onChange={this.inputHandler} type="text" className="form-control" name="editProductName" /></td>
+            <td><input value={this.state.editPrice} onChange={this.inputHandler} type="number" className="form-control" name="editPrice" /></td>
+            <td><input value={this.state.editProductImage} onChange={this.inputHandler} type="text" className="form-control" name="editProductImage" /></td>
+            <td><input value={this.state.editDescription} onChange={this.inputHandler} type="text" className="form-control" name="editDescription" /></td>
+            <td>
+            <select value={this.state.editCategory}
+              onChange={this.inputHandler}
+              name="editCategory"
+              className="form-control"
+            >
+              <option value="">All Items</option>
+              <option value="Baju">Baju</option>
+              <option value="Topi">Topi</option>
+              <option value="Celana">Celana</option>
+            </select>
+            </td>
+            <td>
+              <button onClick={this.saveBtnHandler} className="btn btn-secondary">Save</button>
+            </td>
+            <td>
+              <button onClick={this.cancelEdit} className="btn btn-danger">Cancel</button>
+            </td>
+          </tr>
+        )
+      }
       return (
         <tr>
           <td>{val.id}</td>
@@ -40,7 +107,7 @@ class Admin extends React.Component {
           <td>{val.description}</td>
           <td>{val.category}</td>
           <td>
-            <button className="btn btn-secondary">Edit</button>
+            <button onClick={() => this.editToggle(val)} className="btn btn-secondary">Edit</button>
           </td>
           <td>
             <button className="btn btn-danger">Delete</button>
@@ -53,7 +120,7 @@ class Admin extends React.Component {
   addNewProduct = () => {
     Axios.post(`${API_URL}/products`, {
       productName: this.state.addProductName,
-      price: parseInt(this.state.addProductPrice),
+      price: parseInt(this.state.addPrice),
       productImage: this.state.addProductImage,
       description: this.state.addDescription,
       category: this.state.addCategory,
@@ -63,7 +130,7 @@ class Admin extends React.Component {
         this.setState({
           productList: [],
           addProductName: "",
-          addProductPrice: 0,
+          addPrice: 0,
           addProductImage: "",
           addDescription: "",
           addCategory: "",
@@ -73,6 +140,7 @@ class Admin extends React.Component {
         alert("Terjadi Kesalahan add Product!");
       });
   };
+
 
   inputHandler = (event) => {
     const { name, value } = event.target;
@@ -117,7 +185,7 @@ class Admin extends React.Component {
                   </td>
                   <td>
                     <input
-                      value={this.state.addProductPrice}
+                      value={this.state.addPrice}
                       onChange={this.inputHandler}
                       name="addProductPrice"
                       type="number"

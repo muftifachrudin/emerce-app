@@ -37,15 +37,15 @@
     {
       "id": 1,
       "productName": "Baju Polos Army",
-      "price": 150000,
+      "price": 100000,
       "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/147556bb-e8d3-4431-924f-b45f70092741.jpg",
-      "description": "Ini Baju keluaran terbaru kami",
+      "description": "Ini Baju terbaru kami",
       "category": "Baju"
     },
     {
       "id": 2,
       "productName": "Baju Polos Putih",
-      "price": 120000,
+      "price": 100000,
       "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2022/3/22/10ae8c76-3f7c-44da-b50c-284ad04e9165.jpg",
       "description": "Ini Baju Polos Japan",
       "category": "Baju"
