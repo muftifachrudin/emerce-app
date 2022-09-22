@@ -24,11 +24,11 @@
       "id": 3
     },
     {
-      "fullname": "Fitria",
-      "username": "fa",
-      "email": "fa@mail.com",
-      "password": "asdfg",
-      "role": "user",
+      "fullname": "Super Admin",
+      "username": "Admin",
+      "email": "admin@mail.com",
+      "password": "qwerty",
+      "role": "admin",
       "id": 4
     }
   ],
@@ -160,15 +160,7 @@
       "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/10/20/320dc396-caba-4bdb-aa75-941002102eca.jpg",
       "description": "Original 501",
       "category": "Celana",
-      "id": 17
-    },
-    {
-      "productName": "Celana Kargo",
-      "price": 180000,
-      "productImage": "https://images.tokopedia.net/img/cache/900/VqbcmM/2021/8/24/1f0371c8-7c0c-4f0b-93e8-9955dfeed6a1.jpg",
-      "description": "Murah Laris",
-      "category": "Celana",
-      "id": 18
+      "id": 16
     }
   ],
   "cart": []

@@ -2,6 +2,8 @@ import React from "react";
 import Axios from "axios";
 import { API_URL } from "../constants/API";
 import "../assets/styles/admin.css";
+import { connect } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 class Admin extends React.Component {
   state = {
@@ -20,6 +22,7 @@ class Admin extends React.Component {
     editProductImage: "",
     editDescription: "",
     editCategory: "",
+
   };
   
   fetchProducts = () => {
@@ -59,6 +62,21 @@ class Admin extends React.Component {
       this.fetchProducts()
       this.cancelEdit();
     }) 
+  }
+
+  deleteBtnHandler = (deleteId) => {
+    const confirmDelete = window.confirm("yakin delete barang?")
+    if(confirmDelete){
+      Axios.delete(`${API_URL}/products/${deleteId}`)
+      .then(() => {
+        this.fetchProducts();
+      })
+      .catch(()=>{
+        alert("Terjadi Kesalahan Delete")
+      })
+    } else {
+      alert("Cancel delete barang")
+    }
   }
 
   renderProducts = () => {
@@ -110,7 +128,7 @@ class Admin extends React.Component {
             <button onClick={() => this.editToggle(val)} className="btn btn-secondary">Edit</button>
           </td>
           <td>
-            <button className="btn btn-danger">Delete</button>
+            <button onClick={() => this.deleteBtnHandler(val.id)} className="btn btn-danger">Delete</button>
           </td>
         </tr>
       );
@@ -153,6 +171,9 @@ class Admin extends React.Component {
   }
 
   render() {
+    if (this.props.userGlobal.role !== "admin") {
+      return <Navigate to="/" />;
+    }
     return (
       <div className="p-5">
         <div className="row">
@@ -240,4 +261,10 @@ class Admin extends React.Component {
   }
 }
 
-export default Admin;
+const mapStateToProps = state => {
+  return {
+    userGlobal: state.user
+  }
+}
+
+export default connect(mapStateToProps)(Admin);
